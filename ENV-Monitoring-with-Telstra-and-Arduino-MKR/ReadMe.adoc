@@ -1,0 +1,78 @@
+:Author: michellehowietelstra
+:Email: telstradev@team.telstra.com
+:Date: 24/10/2020
+:Revision: version#2
+:License: Public Domain
+
+= Project: {TelstraDev Arduino MKR NB 1500 Environmental Monitoring}
+
+Monitoring Temperature, Humidity and Lux with your Arduino MKR NB 1500 over Telstra’s Cat-M1 IoT Network
+
+== Step 1: Installation
+1. Follow Telstra's Arduino MKR NB 1500 Get Started Guide to install the SIM and antenna,
+and test your connectivity: https://dev.telstra.com/sites/default/files/assets/Arduino%20MKR%20NB%201500%20Starter%20Guide.pdf 
+2. Align the MKR NB 1500 and ENV shield making sure that the labelled pin connectors are matching. Connect the two.
+3. Install the MKRENV library and use the example sketches to test your sensors
+
+== Step 2: Collect & Display sensor data in Arduino IoT Cloud Dashboard 
+
+1. Create an Arduino Cloud account
+2. Add Device
+3. Add Thing
+4. Add Properties
+5. Edit & Upload the Sketch
+8. Create Dashboad
+
+== Step 3: Deploy and Monitor
+
+1. Connect a suitable battery & disconnect the board from PC
+2. Check the Telstra LPWAN [IoT coverage map](https://www.telstra.com.au/business-enterprise/about-enterprise/our-network/iot-coverage-map):
+3. Install the Arduino IoT Cloud Remote smartphone app
+4. Put your device in a weatherproof location
+5. Check your readings!
+
+You are now ready to start your own Environmental Monitoring IoT Project
+You could:
+•	Add in some code to check if your sensor reading is above a certain threshold, and send an alert 
+•	Integrate other sensors to collect more data
+•	Add in relays or buttons to prompt actions from your board
+•	Actuate lights and buzzers in your IoT kit. Here’s a handy guide: https://create.arduino.cc/projecthub/133030/iot-cloud-getting-started-c93255 
+•	If you’d like to try the same thing with an analog sensor, check out DIYODE’s tutorial with a Gas Sensor: https://diyodemag.com/reviews/long_range_iot_using_arduino_mkr_nb_1500_telsta_developer  
+•	Use temperature and humidity to predict a rainbow. Code Club did this with a raspberry pi emulator, but you can do the same logic with your Arduino: https://medium.com/code-club-australia/getting-your-kids-coding-iot-523487c8253f 
+•	Set up polling via SMS, so you can ask your device for the live sensor readings! We’ve done this before: https://github.com/MichelleHowie/IoTSensorData_OnDemand 
+Check out the Arduino Project hub for ideas from other makers around the world and share your own projects! https://create.arduino.cc/projecthub/ 
+We at TelstraDev would love to hear how you go, share your project on our community forum: https://dev.telstra.com/forums/iot-devices-forum 
+
+
+=== Folder structure
+
+....
+ ENV Monitoring with Telstra and Arduino MKR                => Arduino sketch folder
+  ├── MKR_ENV_Shield_oct24.ino   => main Arduino file
+  ├── thingsProperties.h        => initialises our properties as variables (do not edit)
+  ├── Secret                    => stores passwords and keys for webhooks, APIs or Wi-Fi (not needed in this project)
+  └── ReadMe.adoc               => this file
+....
+
+=== License
+This project is released under a {License} License.
+
+=== Contributing
+To contribute to this project please contact: Michelle @ telstradev@team.telstra.com
+
+=== BOM
+Add the bill of the materials you need for this project.
+
+•	Arduino MKR NB 1500: https://dev.telstra.com/iot-marketplace/arduino-mkr-nb-1500 
+•	Telstra Cat-M1 SIM (included with the board above)
+•	RF Antenna (included with the board above)
+•	Arduino MKR ENV Shield: https://store.arduino.cc/usa/mkr-env-shield 
+•	Micro USB cable
+•	Computer with Arduino IDE installed: https://www.arduino.cc/en/Guide 
+
+
+
+=== Help
+This document is written in the _AsciiDoc_ format, a markup language to describe documents. 
+If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]
+or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
